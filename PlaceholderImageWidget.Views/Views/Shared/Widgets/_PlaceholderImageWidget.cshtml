@@ -1,0 +1,23 @@
+@using Kentico.PageBuilder.Web.Mvc
+@using SeventyeightDigital.PlaceholderImageWidget
+@model ComponentViewModel<PlaceholderImageWidgetProperties>
+
+@{
+    string placeholderImageSrc = Model.Properties.Width + "X" + Model.Properties.Height;
+
+    if (Model.Properties.Text != "" && Model.Properties.Text != null)
+    {
+        string unprocessedPlaceholderImageText = Model.Properties.Text;
+        string processedPlaceholderImageText = unprocessedPlaceholderImageText.Replace(" ", "+");
+        placeholderImageSrc = Model.Properties.Width + "X" + Model.Properties.Height + "?text=" + processedPlaceholderImageText;
+    }
+}
+
+@if (Context.Kentico().PageBuilder().EditMode)
+{
+    <img id="@Model.Properties.PlaceholderImageID" class="@Model.Properties.PlaceholderImageCSSClasses" src="https://via.placeholder.com/@placeholderImageSrc" />
+}
+else
+{
+    <img id="@Model.Properties.PlaceholderImageID" class="@Model.Properties.PlaceholderImageCSSClasses" src="https://via.placeholder.com/@placeholderImageSrc" />
+}
