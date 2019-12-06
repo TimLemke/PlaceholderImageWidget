@@ -14,9 +14,11 @@ Using the widget properties, you can edit the width and height of the placeholde
 
 # Contributions, bug fixes and license
 
-This widget integration comes without any support whatsoever.
-
 Feel free to Fork and submit pull requests to contribute.
+
+You can submit bugs through the issue list and I will get to them as soon as I can, unless you want to fix it yourself and submit a pull request.
+
+This is free to use and modify.
 
 Check the License.txt for License information
 
